@@ -84,6 +84,19 @@
       font-size: 15px;
       cursor: pointer;
     }
+    .memory-btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #2b2b2b;
+      padding: 10px 18px;
+      margin-top: 15px;
+      font-weight: bold;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
     .surprise-msg {
       display: none;
       background: #fff8e7;
@@ -93,6 +106,21 @@
       text-align: center;
       font-style: italic;
       color: #555;
+    }
+    .memory-card {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background: #ffffff;
+      border: 2px solid #8b0000;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .memory-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
     footer {
       text-align: center;
@@ -138,7 +166,16 @@
 
     <div class="surprise-msg" id="mensajeOculto">
       💌 <strong>Nota del Editor (Babitas):</strong><br>
-      Espero que tengas un lindo día, mi niña. Sonríe mucho hoy, ¡te quierooo gigantesco!
+      Espero que tengas un lindo día, mi niña. Sonríe mucho hoy, ¡te amo gigantesco!<br><br>
+      <button class="memory-btn" onclick="mostrarRecuerdo()">📸 VER NUESTRO RECUERDO ESPECIAL</button>
+    </div>
+
+    <div class="memory-card" id="tarjetaRecuerdo">
+      <h3 style="color: #8b0000; margin-top: 0;">Un recuerdo de nosotros ❤️</h3>
+      <img src="https://lh3.googleusercontent.com/gg-sop/AL7e7_XmNfR74H60U0Y5tqNlJc0v6g2z" alt="Recuerdo de Samir y Ana">
+      <p style="font-size: 13px; color: #444; margin-top: 10px; font-style: normal;">
+        "Juntos siempre es mi lugar favorito. Gracias por ser mi niña hermosa."
+      </p>
     </div>
 
     <footer>
@@ -155,8 +192,18 @@
         msg.style.display = "none";
       }
     }
+
+    function mostrarRecuerdo() {
+      var recuerdo = document.getElementById("tarjetaRecuerdo");
+      if (recuerdo.style.display === "none" || recuerdo.style.display === "") {
+        recuerdo.style.display = "block";
+      } else {
+        recuerdo.style.display = "none";
+      }
+    }
   </script>
 
 </body>
 </html>
+
 
