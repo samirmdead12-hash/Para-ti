@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Diario del Amor - Edición Especial</title>
+  <style>
+    body {
+      background-color: #f4ebd9;
+      color: #2b2b2b;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 15px;
+    }
+    .newspaper {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fdfbf7;
+      border: 2px solid #2b2b2b;
+      padding: 20px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+    }
+    header {
+      text-align: center;
+      border-bottom: 3px double #2b2b2b;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    .main-title {
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 5px 0;
+    }
+    .sub-bar {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #2b2b2b;
+      border-bottom: 1px solid #2b2b2b;
+      padding: 4px 0;
+      font-size: 12px;
+      font-style: italic;
+    }
+    .headline {
+      text-align: center;
+      font-size: 24px;
+      color: #8b0000;
+      margin: 20px 0 10px 0;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    .article {
+      text-align: justify;
+      line-height: 1.6;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    .weather-box {
+      background: #f0e6d2;
+      border: 1px dashed #2b2b2b;
+      padding: 12px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    .weather-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    .interactive-btn {
+      display: block;
+      width: 100%;
+      background: #8b0000;
+      color: #fff;
+      text-align: center;
+      padding: 12px 0;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 25px;
+      border: none;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .surprise-msg {
+      display: none;
+      background: #fff8e7;
+      border: 1px solid #d4af37;
+      padding: 15px;
+      margin-top: 15px;
+      text-align: center;
+      font-style: italic;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      font-size: 11px;
+      border-top: 1px solid #2b2b2b;
+      padding-top: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="newspaper">
+    <header>
+      <div class="sub-bar">
+        <span>Edición Matutina Exclusiva</span>
+        <span>Bogotá D. C.</span>
+        <span>Precio: Un Abrazo</span>
+      </div>
+      <h1 class="main-title">EL DIARIO DE NOSOTROS</h1>
+      <div style="font-size: 12px; font-weight: bold;">¡EL PERIÓDICO MÁS MENTIRILLERO Y AMOROSO DEL DÍA!</div>
+    </header>
+
+    <div class="headline">¡ÚLTIMA HORA!<br>¡Buenos días, mi niña! ❤️</div>
+
+    <div class="article">
+      <p><strong>BOGOTÁ.</strong> Fuentes oficiales confirman que hoy es un día extraordinario solo por el hecho de que <strong>Ana</strong> ya abrió los ojos. Reportes de inteligencia revelan un dato impactante para esta mañana:</p>
+      
+      <p style="text-align: center; font-size: 17px; font-weight: bold; color: #8b0000; margin: 15px 0;">
+        "Don Chistoso extraña a Doña Enojona"
+      </p>
+
+      <p>Se confirma que Samir (alias <em>Babitas</em>) no deja de pensar en ti desde temprano. Aunque a veces te pongas tu traje de doña enojona, sigues siendo la niña más consentida y hermosa del universo.</p>
+    </div>
+
+    <div class="weather-box">
+      <div class="weather-title">🌦️ Reporte del Clima para Bogotá D. C.</div>
+      <div><strong>Temperatura:</strong> Templada por las mañanas, pero con 100% de probabilidad de lluvia de besos enviados por Babitas.</div>
+      <div><strong>Pronóstico:</strong> Se espera que tengas un día genial, lleno de sonrisas y que todo te salga maravilloso.</div>
+    </div>
+
+    <button class="interactive-btn" onclick="mostrarMensaje()">✨ Toca aquí para reclamar tu premio matutino</button>
+
+    <div class="surprise-msg" id="mensajeOculto">
+      💌 <strong>Nota del Editor (Babitas):</strong><br>
+      Espero que tengas un lindo día, mi niña. Sonríe mucho hoy, ¡te amo gigantesco!
+    </div>
+
+    <footer>
+      Redactado con mucho amor exclusivamente para Ana. Prohibida su distribución sin una sonrisa previa.
+    </footer>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      var msg = document.getElementById("mensajeOculto");
+      if (msg.style.display === "none" || msg.style.display === "") {
+        msg.style.display = "block";
+      } else {
+        msg.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
 
